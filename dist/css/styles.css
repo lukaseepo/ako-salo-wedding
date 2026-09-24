@@ -103,8 +103,7 @@ section, footer { position: relative; overflow: hidden; }
 .childhood-photo-ako { width: 80%; height: 100%; justify-self: end; }
 .childhood-photo-salo { width: 108%; overflow: visible; justify-self: start; transform: translateX(-3px); }
 .childhood-photo img { position: absolute; left: 50%; bottom: 0; display: block; width: auto; max-width: none; height: 82%; translate: -50% 0; object-fit: contain; object-position: center bottom; filter: sepia(.88) saturate(1.05) hue-rotate(350deg) brightness(1.1) contrast(.88) drop-shadow(0 12px 18px rgba(135,99,34,.16)); }
-.childhood-photo-salo img { filter: sepia(.88) saturate(.98) hue-rotate(350deg) brightness(.86) contrast(.96) drop-shadow(0 12px 18px rgba(135,99,34,.16)); }
-.childhood-heart { position: relative; z-index: 3; align-self: center; margin: 0; color: var(--gold); font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; text-shadow: 0 4px 14px rgba(152,113,38,.24); transform: translate(-6px, 6%) rotate(14deg); }
+.childhood-heart { position: relative; z-index: 3; align-self: center; margin: 0; color: var(--gold); font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; text-shadow: 0 4px 14px rgba(152,113,38,.24); transform: translate(0, -5px) rotate(14deg); }
 .childhood-pair + .hero-names { margin-top: 58px; }
 .hero-date { margin: 42px 0 0; color: var(--gold-deep); font: 500 .75rem var(--sans); letter-spacing: .3em; }
 .ornament { width: min(70vw, 360px); display: flex; align-items: center; justify-content: center; gap: 15px; }
@@ -200,7 +199,7 @@ section, footer { position: relative; overflow: hidden; }
   .childhood-photo-ako, .childhood-photo-salo { width: 84%; }
   .childhood-photo-salo { width: 115%; transform: translateX(-6px); }
   .childhood-photo-salo img { width: auto; height: 82%; }
-  .childhood-heart { transform: translate(-6px, 5%) rotate(14deg); }
+  .childhood-heart { transform: translate(0, -5px) rotate(14deg); }
   .childhood-pair + .hero-names { margin-top: clamp(54px, 7vw, 70px); }
 }
 
@@ -216,18 +215,19 @@ section, footer { position: relative; overflow: hidden; }
   .childhood-photo-ako, .childhood-photo-salo { width: 84%; }
   .childhood-photo-salo { width: 112%; transform: translateX(-5px); }
   .childhood-photo-salo img { width: auto; height: 82%; }
-  .childhood-heart { font-size: clamp(2.1rem, 7vw, 2.7rem); transform: translate(-5px, 5%) rotate(14deg); }
+  .childhood-heart { font-size: clamp(2.1rem, 7vw, 2.7rem); transform: translate(0, -5px) rotate(14deg); }
   .childhood-pair + .hero-names { margin-top: clamp(72px, 13vw, 86px); }
   .childhood-pair + .hero-names { translate: 0 28px; }
   .date-lockup { flex-direction: column; gap: 28px; }
   .date-day { font-size: clamp(9rem, 47vw, 13rem); }
   .date-lockup > div { align-items: center; text-align: center; gap: 12px; font-size: 2.25rem; }
   .date-lockup i { width: 120px; }
-  .venue-grid { display: flex; flex-direction: column; align-items: stretch; }
+  .venue-grid { display: flex; flex-direction: column; align-items: center; }
   .venue-section { padding: 110px 7vw 80px; }
   .venue-grid { gap: 0; }
-  .venue-copy { width: min(88vw, 560px); margin: 0 auto -44px; padding: 36px 28px 66px; }
-  .venue-photo { width: min(92vw, 600px); align-self: center; }
+  .venue-copy { width: 100%; max-width: 560px; margin: 0 auto -44px; padding: 36px 28px 66px; text-align: center; }
+  .venue-copy h2 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .venue-photo { width: 100%; max-width: 600px; }
 }
 
 @media (max-width: 760px) and (min-width: 431px) {
@@ -235,7 +235,7 @@ section, footer { position: relative; overflow: hidden; }
   .childhood-photo-ako, .childhood-photo-salo { width: 80%; }
   .childhood-photo-salo { width: 108%; transform: translateX(-3px); }
   .childhood-photo-salo img { transform: none; }
-  .childhood-heart { font-size: 1.9rem; transform: translate(-4px, 4%) rotate(14deg); }
+  .childhood-heart { font-size: 1.9rem; transform: translate(1px, -5px) rotate(14deg); }
 }
 
 @media (min-width: 761px) and (max-width: 1024px) {
@@ -255,7 +255,7 @@ section, footer { position: relative; overflow: hidden; }
   .childhood-photo-ako, .childhood-photo-salo { width: 80%; }
   .childhood-photo-salo { width: 112%; transform: translateX(-4px); }
   .childhood-photo-salo img { width: auto; height: 82%; transform: none; }
-  .childhood-heart { font-size: clamp(1.5rem, 6.5vw, 1.85rem); transform: translate(-4px, 4%) rotate(14deg); }
+  .childhood-heart { font-size: clamp(1.5rem, 6.5vw, 1.85rem); transform: translate(1px, -5px) rotate(14deg); }
   .childhood-pair + .hero-names { margin-top: 90px; }
   .envelope-stage { width: 92vw; }
   .wax-seal { width: 68px; }

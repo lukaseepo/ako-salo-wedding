@@ -37,7 +37,7 @@
     document.getElementById("schedule").innerHTML = config.schedule.map(item => `
       <article class="timeline-item reveal">
         <time class="timeline-time">${item.time}</time>
-        <div><h3>${item.title}</h3><p>${item.note}</p></div>
+        <div><h3>${item.title}</h3>${item.note ? `<p>${item.note}</p>` : ""}</div>
       </article>`).join("");
   }
 
@@ -79,7 +79,7 @@
     const hours = Math.floor((distance / 3600000) % 24);
     const minutes = Math.floor((distance / 60000) % 60);
     const seconds = Math.floor((distance / 1000) % 60);
-    text("days", String(days).padStart(3, "0"));
+    text("days", String(days));
     text("hours", String(hours).padStart(2, "0"));
     text("minutes", String(minutes).padStart(2, "0"));
     text("seconds", String(seconds).padStart(2, "0"));
