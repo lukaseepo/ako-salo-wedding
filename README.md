@@ -13,5 +13,3 @@ Serve the `dist` folder with any static server. For example:
 ```bash
 npx serve dist
 ```
-
-The RSVP is a polished frontend demo. Connect the submit handler in `dist/js/app.js` to your preferred backend when ready.

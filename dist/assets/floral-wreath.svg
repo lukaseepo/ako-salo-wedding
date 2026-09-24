@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" fill="none">
+  <g opacity=".7">
+    <path d="M143 369C77 293 78 184 164 119M557 369C623 293 622 184 536 119M117 332C74 250 101 165 190 95M583 332C626 250 599 165 510 95" stroke="#bd9444" stroke-width="3"/>
+    <g fill="#d4b364"><ellipse cx="119" cy="310" rx="11" ry="27" transform="rotate(-37 119 310)"/><ellipse cx="103" cy="263" rx="10" ry="25" transform="rotate(-70 103 263)"/><ellipse cx="112" cy="211" rx="10" ry="25" transform="rotate(-102 112 211)"/><ellipse cx="139" cy="164" rx="10" ry="25" transform="rotate(-130 139 164)"/><ellipse cx="581" cy="310" rx="11" ry="27" transform="rotate(37 581 310)"/><ellipse cx="597" cy="263" rx="10" ry="25" transform="rotate(70 597 263)"/><ellipse cx="588" cy="211" rx="10" ry="25" transform="rotate(102 588 211)"/><ellipse cx="561" cy="164" rx="10" ry="25" transform="rotate(130 561 164)"/></g>
+    <g fill="#f5e8c5" stroke="#c99a3a" stroke-width="2"><circle cx="152" cy="352" r="37"/><circle cx="135" cy="151" r="28"/><circle cx="548" cy="352" r="37"/><circle cx="565" cy="151" r="28"/></g>
+    <g fill="#fffaf0"><circle cx="152" cy="352" r="22"/><circle cx="135" cy="151" r="16"/><circle cx="548" cy="352" r="22"/><circle cx="565" cy="151" r="16"/></g>
+    <g fill="#a87821"><circle cx="152" cy="352" r="7"/><circle cx="135" cy="151" r="6"/><circle cx="548" cy="352" r="7"/><circle cx="565" cy="151" r="6"/></g>
+    <g fill="#dfc579"><circle cx="105" cy="342" r="9"/><circle cx="165" cy="112" r="8"/><circle cx="595" cy="342" r="9"/><circle cx="535" cy="112" r="8"/></g>
+  </g>
+</svg>

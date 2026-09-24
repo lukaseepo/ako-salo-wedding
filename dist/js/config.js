@@ -1,22 +1,21 @@
 window.WEDDING_CONFIG = {
   couple: { first: "Ako", second: "Salo" },
-  date: "2027-09-12T17:00:00+04:00",
-  dateDisplay: { day: "12", month: "September", year: "2027", full: "12 September 2027" },
-  ceremonyTime: "Ceremony at five in the evening",
+  date: "2026-10-31T17:00:00+04:00",
+  dateDisplay: { day: "31", month: "ოქტომბერი", year: "2026", full: "31 ოქტომბერი 2026" },
+  ceremonyTime: "ცერემონია საღამოს ხუთ საათზე",
   venue: {
-    name: "Garden of Tbilisi",
-    address: "14 Mtkvari Lane<br>Tbilisi, Georgia",
-    mapsUrl: "https://maps.google.com/?q=Tbilisi+Georgia"
+    name: "რესტორანი „შარბათი“",
+    address: "დავით აღმაშენებლის ხეივანი №178<br>დიდი დიღომი, თბილისი",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Restaurant+Sharbati+178+David+Aghmashenebeli+Alley+Tbilisi"
   },
-  rsvpDeadline: "1 August 2027",
-  invitationMessage: "Together with our families, we would be honoured to have you beside us as we exchange our vows and celebrate into the night.",
+  invitationMessage: "ოჯახებთან ერთად, დიდი სიყვარულით გიწვევთ ჩვენს ქორწილში — იყავით ჩვენ გვერდით, როცა ერთმანეთს სამუდამო სიტყვას მივცემთ და ამ დღეს თქვენთან ერთად აღვნიშნავთ.",
   schedule: [
-    { time: "17:00", title: "Guest arrival", note: "Welcome drinks in the garden" },
-    { time: "18:00", title: "Ceremony", note: "Under the old stone arches" },
-    { time: "19:00", title: "Dinner", note: "A candlelit Georgian table" },
-    { time: "21:00", title: "Celebration", note: "Music, dancing and midnight sweets" }
+    { time: "17:00", title: "სტუმრების მიღება", note: "მისასალმებელი სასმელები ეზოში" },
+    { time: "18:00", title: "ცერემონია", note: "ძველი ქვის თაღების ქვეშ" },
+    { time: "19:00", title: "ვახშამი", note: "სანთლებით განათებული ქართული სუფრა" },
+    { time: "21:00", title: "ზეიმი", note: "მუსიკა, ცეკვა და ტკბილეული შუაღამით" }
   ],
-  dressCode: "Formal · Elegant",
-  photos: { story: "assets/night-garden.png" },
+  dressCode: "ოფიციალური · ელეგანტური",
+  photos: { story: "assets/sharbati-exterior.jpg" },
   music: { src: "", enabled: false }
 };

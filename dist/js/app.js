@@ -29,7 +29,6 @@
     text("invitationMessage", config.invitationMessage);
     text("venueName", config.venue.name);
     text("ceremonyTime", config.ceremonyTime);
-    text("rsvpDeadline", config.rsvpDeadline);
     text("dressCode", config.dressCode);
     document.getElementById("venueAddress").innerHTML = config.venue.address;
     document.getElementById("mapsLink").href = config.venue.mapsUrl;
@@ -106,22 +105,6 @@
     targets.forEach(el => revealObserver.observe(el));
   }
 
-  function validateForm(form) {
-    let valid = true;
-    form.querySelectorAll(".field").forEach(field => field.classList.remove("invalid"));
-    const name = form.elements.fullName;
-    const attendance = form.querySelector("input[name=attendance]:checked");
-    if (!name.value.trim()) {
-      name.closest(".field").classList.add("invalid");
-      valid = false;
-    }
-    if (!attendance) {
-      form.querySelector("fieldset").classList.add("invalid");
-      valid = false;
-    }
-    return valid;
-  }
-
   openButton.addEventListener("click", () => openInvitation("manual"));
   autoOpenTimer = window.setTimeout(() => openInvitation("auto"), 5000);
 
@@ -129,21 +112,13 @@
     if (music.paused) {
       music.play().then(() => {
         musicToggle.classList.remove("paused");
-        musicToggle.setAttribute("aria-label", "Pause background music");
+        musicToggle.setAttribute("aria-label", "ფონური მუსიკის შეჩერება");
       }).catch(() => {});
     } else {
       music.pause();
       musicToggle.classList.add("paused");
-      musicToggle.setAttribute("aria-label", "Play background music");
+      musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
     }
-  });
-
-  document.getElementById("rsvpForm").addEventListener("submit", event => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!validateForm(form)) return;
-    form.hidden = true;
-    document.getElementById("rsvpSuccess").classList.add("visible");
   });
 
   hydrateContent();
