@@ -105,6 +105,34 @@
     targets.forEach(el => revealObserver.observe(el));
   }
 
+  const galleryCards = Array.from(document.querySelectorAll(".gallery-card"));
+  const galleryDialog = document.getElementById("galleryDialog");
+  const galleryFullImage = document.getElementById("galleryFullImage");
+  let galleryIndex = 0;
+
+  function showGalleryPhoto(index) {
+    galleryIndex = (index + galleryCards.length) % galleryCards.length;
+    const photo = galleryCards[galleryIndex].querySelector("img");
+    galleryFullImage.src = photo.src;
+    galleryFullImage.alt = photo.alt;
+    text("galleryCount", `${String(galleryIndex + 1).padStart(2, "0")} / ${String(galleryCards.length).padStart(2, "0")}`);
+  }
+
+  galleryCards.forEach((card, index) => card.addEventListener("click", () => {
+    showGalleryPhoto(index);
+    galleryDialog.showModal();
+  }));
+  document.getElementById("galleryClose").addEventListener("click", () => galleryDialog.close());
+  document.getElementById("galleryPrev").addEventListener("click", () => showGalleryPhoto(galleryIndex - 1));
+  document.getElementById("galleryNext").addEventListener("click", () => showGalleryPhoto(galleryIndex + 1));
+  galleryDialog.addEventListener("click", event => {
+    if (event.target === galleryDialog) galleryDialog.close();
+  });
+  galleryDialog.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft") showGalleryPhoto(galleryIndex - 1);
+    if (event.key === "ArrowRight") showGalleryPhoto(galleryIndex + 1);
+  });
+
   openButton.addEventListener("click", () => openInvitation("manual"));
   autoOpenTimer = window.setTimeout(() => openInvitation("auto"), 5000);
 

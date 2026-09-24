@@ -70,8 +70,51 @@
       </div>
     </section>
 
-    <section class="save-date paper-section" id="date">
+    <section class="gallery-section section-ivory" id="gallery" aria-labelledby="galleryTitle">
       <div class="section-number">I</div>
+      <div class="gallery-heading reveal">
+        <p class="gallery-heading-names">Ako &amp; Salo</p>
+        <h2 id="galleryTitle">ჩვენი მოგონებები</h2>
+        <div class="gallery-heading-rule" aria-hidden="true"><span></span>✦<span></span></div>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-card gallery-card-feature reveal" type="button" aria-label="პირველი ფოტოს გახსნა">
+          <img src="assets/gallery/01-evening.jpg" alt="Ako და Salo ერთად, ერთ თბილ საღამოს" width="1100" height="1956" loading="lazy" decoding="async">
+          <span>01 / 08</span>
+        </button>
+        <button class="gallery-card reveal" type="button" aria-label="მეორე ფოტოს გახსნა">
+          <img src="assets/gallery/02-together.jpg" alt="Ako და Salo ერთად იღიმიან" width="1100" height="1467" loading="lazy" decoding="async">
+          <span>02 / 08</span>
+        </button>
+        <button class="gallery-card gallery-card-street reveal" type="button" aria-label="მესამე ფოტოს გახსნა">
+          <img src="assets/gallery/03-street.jpg" alt="Ako და Salo ქალაქში" width="1100" height="1467" loading="lazy" decoding="async">
+          <span>03 / 08</span>
+        </button>
+        <button class="gallery-card gallery-card-travel reveal" type="button" aria-label="მეოთხე ფოტოს გახსნა">
+          <img src="assets/gallery/04-travel.jpg" alt="Ako და Salo მოგზაურობისას" width="1100" height="1467" loading="lazy" decoding="async">
+          <span>04 / 08</span>
+        </button>
+        <button class="gallery-card reveal" type="button" aria-label="მეხუთე ფოტოს გახსნა">
+          <img src="assets/gallery/05-selfie.jpg" alt="Ako და Salo ერთად გადაღებულ ფოტოზე" width="1100" height="1467" loading="lazy" decoding="async">
+          <span>05 / 08</span>
+        </button>
+        <button class="gallery-card gallery-card-flowers reveal" type="button" aria-label="მეექვსე ფოტოს გახსნა">
+          <img src="assets/gallery/06-flowers.jpg" alt="Ako და Salo წითელი ყვავილებით" width="1100" height="1528" loading="lazy" decoding="async">
+          <span>06 / 08</span>
+        </button>
+        <button class="gallery-card gallery-card-cozy reveal" type="button" aria-label="მეშვიდე ფოტოს გახსნა">
+          <img src="assets/gallery/07-cozy.jpg" alt="Ako და Salo ერთმანეთთან ახლოს" width="1100" height="1956" loading="lazy" decoding="async">
+          <span>07 / 08</span>
+        </button>
+        <button class="gallery-card reveal" type="button" aria-label="მერვე ფოტოს გახსნა">
+          <img src="assets/gallery/08-laugh.jpg" alt="Ako და Salo მხიარულ მომენტში" width="828" height="1501" loading="lazy" decoding="async">
+          <span>08 / 08</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="save-date paper-section" id="date">
+      <div class="section-number">II</div>
       <p class="eyebrow reveal">დაიმახსოვრეთ თარიღი</p>
       <div class="date-lockup reveal">
         <span class="date-day" id="dateDay">31</span>
@@ -100,7 +143,7 @@
     </section>
 
     <section class="venue-section paper-section" id="venue">
-      <div class="section-number">II</div>
+      <div class="section-number">III</div>
       <div class="venue-grid">
         <div class="venue-copy">
           <h2 class="reveal" id="venueName">რესტორანი „შარბათი“</h2>
@@ -127,6 +170,22 @@
       <div class="final-date reveal">31 · 10 · 2026</div>
     </footer>
   </main>
+
+  <dialog class="gallery-dialog" id="galleryDialog" aria-label="ფოტოების გალერეა">
+    <button class="gallery-dialog-close" id="galleryClose" type="button" aria-label="ფოტოს დახურვა">×</button>
+    <div class="gallery-dialog-stage">
+      <button class="gallery-dialog-arrow gallery-dialog-prev" id="galleryPrev" type="button" aria-label="წინა ფოტო">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M25 16H7m7-7-7 7 7 7"/></svg>
+      </button>
+      <figure class="gallery-dialog-figure">
+        <img id="galleryFullImage" alt="">
+      </figure>
+      <button class="gallery-dialog-arrow gallery-dialog-next" id="galleryNext" type="button" aria-label="შემდეგი ფოტო">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M7 16h18m-7-7 7 7-7 7"/></svg>
+      </button>
+    </div>
+    <p class="gallery-dialog-count" id="galleryCount"></p>
+  </dialog>
 
   <button class="music-toggle" id="musicToggle" type="button" aria-label="ფონური მუსიკის ჩართვა" hidden><span></span><i></i><b></b></button>
   <audio id="backgroundMusic" loop preload="none"></audio>
