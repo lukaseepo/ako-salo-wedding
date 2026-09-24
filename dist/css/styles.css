@@ -91,7 +91,7 @@ section, footer { position: relative; overflow: hidden; }
 .halo { position: absolute; left: 50%; top: 50%; width: min(92vw, 820px); aspect-ratio: 1; border: 1px solid rgba(199,154,66,.22); border-radius: 50%; background: url("../assets/floral-wreath.svg") center / 100% auto no-repeat; box-shadow: 0 0 100px rgba(199,154,66,.1), inset 0 0 80px rgba(199,154,66,.06); opacity: .54; transform: translate(-50%, -50%); }
 .halo::before, .halo::after { content: ""; position: absolute; inset: 8%; border: 1px solid rgba(199,154,66,.1); border-radius: 50%; }
 .halo::after { inset: 16%; }
-.hero-top-date { position: absolute; top: max(58px, 6.25vh); margin: 0; color: var(--gold-deep); font: 500 clamp(1.18rem, 1.8vw, 1.4rem)/1 var(--latin-serif); letter-spacing: .3em; }
+.hero-top-date { position: absolute; top: max(46px, 5vh); margin: 0; color: var(--gold-deep); font: 500 clamp(1.18rem, 1.8vw, 1.4rem)/1 var(--latin-serif); letter-spacing: .3em; }
 .hero-composition { position: absolute; left: 50%; top: 50%; z-index: 2; width: min(94vw, 760px); display: flex; flex-direction: column; align-items: center; translate: -50% -50%; }
 .hero-kids { margin: 0 0 28px; padding-bottom: 28px; color: var(--gold-deep); font: 500 clamp(.9rem, 1.4vw, 1.12rem)/1.4 var(--latin-serif); letter-spacing: .18em; text-transform: uppercase; translate: 0 34px; }
 .hero-names { z-index: 1; margin: 0; display: flex; flex-direction: column; align-items: center; color: var(--gold); font: 400 clamp(5rem, 12vw, 8rem)/.62 var(--script); letter-spacing: 0; text-shadow: 0 10px 40px rgba(199,154,66,.12); translate: 0 44px; }
