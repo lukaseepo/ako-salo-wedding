@@ -44,11 +44,34 @@
   function startMusic() {
     if (!config.music.enabled || !config.music.src) return;
     music.src = config.music.src;
-    musicToggle.hidden = false;
+    musicToggle.classList.add("paused");
+    musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
     if (userInitiated) {
-      music.play().then(() => musicToggle.classList.remove("paused")).catch(() => musicToggle.classList.add("paused"));
+      // Unlock playback during the envelope tap, but keep it silent until the reveal finishes.
+      music.muted = true;
+      music.play().then(() => {
+        if (invitationState === "OPENED") revealMusic();
+      }).catch(() => {
+        music.muted = false;
+        musicToggle.classList.add("paused");
+      });
+    }
+  }
+
+  function revealMusic() {
+    if (!config.music.enabled || !config.music.src) return;
+    musicToggle.hidden = false;
+    if (userInitiated && !music.paused) {
+      if (music.muted) {
+        music.currentTime = 0;
+        music.muted = false;
+      }
+      musicToggle.classList.remove("paused");
+      musicToggle.setAttribute("aria-label", "ფონური მუსიკის შეჩერება");
     } else {
+      music.muted = false;
       musicToggle.classList.add("paused");
+      musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
     }
   }
 
@@ -69,6 +92,7 @@
       body.classList.remove("is-opening");
       body.classList.add("is-opened");
       envelopeScene.setAttribute("aria-hidden", "true");
+      revealMusic();
       observeReveals();
     }, OPEN_DURATION);
   }
@@ -109,6 +133,7 @@
   const galleryDialog = document.getElementById("galleryDialog");
   const galleryFullImage = document.getElementById("galleryFullImage");
   let galleryIndex = 0;
+  let galleryScrollY = 0;
 
   function showGalleryPhoto(index) {
     galleryIndex = (index + galleryCards.length) % galleryCards.length;
@@ -120,8 +145,18 @@
 
   galleryCards.forEach((card, index) => card.addEventListener("click", () => {
     showGalleryPhoto(index);
+    galleryScrollY = window.scrollY;
     galleryDialog.showModal();
+    document.documentElement.classList.add("gallery-open");
+    body.style.top = `-${galleryScrollY}px`;
+    body.classList.add("gallery-open");
   }));
+  galleryDialog.addEventListener("close", () => {
+    body.classList.remove("gallery-open");
+    body.style.top = "";
+    window.scrollTo(0, galleryScrollY);
+    document.documentElement.classList.remove("gallery-open");
+  });
   document.getElementById("galleryClose").addEventListener("click", () => galleryDialog.close());
   document.getElementById("galleryPrev").addEventListener("click", () => showGalleryPhoto(galleryIndex - 1));
   document.getElementById("galleryNext").addEventListener("click", () => showGalleryPhoto(galleryIndex + 1));
@@ -147,6 +182,10 @@
       musicToggle.classList.add("paused");
       musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
     }
+  });
+  music.addEventListener("pause", () => {
+    musicToggle.classList.add("paused");
+    musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
   });
 
   hydrateContent();

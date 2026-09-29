@@ -10,11 +10,13 @@ window.WEDDING_CONFIG = {
   },
   invitationMessage: "ოჯახებთან ერთად, დიდი სიყვარულით გიწვევთ ჩვენს ქორწილში — იყავით ჩვენ გვერდით, როცა ერთმანეთს სამუდამო სიტყვას მივცემთ და ამ დღეს თქვენთან ერთად აღვნიშნავთ.",
   schedule: [
-    { time: "17:00", title: "სტუმრების შეკრება" },
-    { time: "17:20", title: "ხელისმოწერის ცერემონია" },
-    { time: "18:00", title: "ვახშამი" }
+    { time: "13:00", title: "ჯვრისწერა", note: "საგურამოს წმ. ილია მართლის ტაძარი" },
+    { time: "15:00", title: "წყვილის ფოტოსესია", note: "სასტუმრო „Radisson RED Tbilisi“" },
+    { time: "17:00", title: "სტუმრების მიღებით", note: "რესტორანი „შარბათი“" },
+    { time: "17:20", title: "ხელისმოწერის ცერემონია", note: "რესტორანი „შარბათი“" },
+    { time: "18:00", title: "ვახშამი", note: "რესტორანი „შარბათი“" }
   ],
   dressCode: "ოფიციალური · ელეგანტური",
   photos: { story: "assets/sharbati-exterior.jpg" },
-  music: { src: "", enabled: false }
+  music: { src: "assets/audio/a-thousand-years-piano-cello.mp3", enabled: true }
 };
