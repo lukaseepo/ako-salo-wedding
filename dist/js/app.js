@@ -72,6 +72,13 @@
       music.muted = false;
       musicToggle.classList.add("paused");
       musicToggle.setAttribute("aria-label", "ფონური მუსიკის ჩართვა");
+      if (!userInitiated) {
+        // A refresh auto-opens the invitation; retry the song instead of carrying over a pause.
+        music.play().then(() => {
+          musicToggle.classList.remove("paused");
+          musicToggle.setAttribute("aria-label", "ფონური მუსიკის შეჩერება");
+        }).catch(() => {});
+      }
     }
   }
 
